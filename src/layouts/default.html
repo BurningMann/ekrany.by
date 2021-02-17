@@ -240,8 +240,8 @@
                     </div>
                     <form>
                         <input type="text" placeholder="Имя">
-                        <input type="text" placeholder="Мобильный">
-                        <button type="submit">Отправить</button>
+                        <input type="text" placeholder="Мобильный" class="mobile_masked">
+                        <button type="submit" class="animate_button">Отправить</button>
                     </form>
                 </div>
             </div>
@@ -283,6 +283,8 @@
     </main>
 
     {{> footer }}
+    
+    {{> modals }}
 
     <script src="assets/js/scripts.js"></script>
 </body>

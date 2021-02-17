@@ -51,13 +51,7 @@ const path = {
 
 /* Tasks */
 
-function serve() {
-    browserSync.init({
-        server: {
-            baseDir: "./" + distPath
-        }
-    });
-}
+
 
 function html(cb) {
     panini.refresh();
@@ -138,6 +132,7 @@ function cssWatch(cb) {
             suffix: ".min",
             extname: ".css"
         })) */
+        .pipe(concat('style.css'))
         .pipe(dest(path.build.css))
         .pipe(browserSync.reload({stream: true}));
 
@@ -218,9 +213,15 @@ function watchFiles() {
     gulp.watch([path.watch.images], images);
     gulp.watch([path.watch.fonts], fonts);
 }
-
-const build = gulp.series(clean, gulp.parallel(html, additionalcss, css, js, images, fonts));
-const watch = gulp.parallel(build, watchFiles, serve);
+function serve() {
+    browserSync.init({
+        server: {
+            baseDir: "./" + distPath
+        }
+    });
+}
+const build = gulp.series(clean, html, additionalcss, css, js, images, fonts);
+const watch = gulp.parallel(watchFiles, serve);
 
 
 
