@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> head }}
+</head>
+<body>
+
+    {{> header }}
+    <div class="breadcrumb_wrapper">
+        <a href="/" class="breadcrumb_element">Главная</a>
+        <a href="#content" class="breadcrumb_element last">Контакты</a>
+    </div>
+    <main>
+        <h1>Контактная информация</h1>
+        <div class="container">
+            <div class="contact_info_wrapper">
+                <div class="contact_box">
+                    <span class="contact_title">Телефоны</span>
+                    <a href="tel:+375 29 295 55 44" class="number_ico">+375 29 295 55 44 <img src="assets/img/svg/nuber-color-ico.svg"></a>
+                    <a href="tel:+375 29 602 64 49">+375 29 602 64 49</a>
+                </div>
+                <div class="contact_box">
+                    <span class="contact_title">Почта</span>
+                    <a href="mailto:ekrany.by@mail.ru">ekrany.by@mail.ru</a>
+                </div>
+                <div class="contact_box">
+                    <span class="contact_title">Соц. сети</span>
+                    <a href="instagram.com/interno.by" class="insta_ico">instagram.com/interno.by<img src="assets/img/svg/insta-color-ico.svg"></a>
+                </div>
+                <div class="contact_box">
+                    <span class="contact_title">Адрес</span>
+                    <p>220045, Республика Беларусь, г.Минск, Проспект Дзержинского 115, оф. 447
+                    </p>
+                </div>
+            </div>
+            <section class="about_company">
+                <div class="container">
+                    <div class="heading">
+                        <span>о компании</span>
+                    </div>
+                    <div class="about_company_wrapper">
+                        <div class="text_box">
+                            <p>Ekrany.by – декоративные экраны на батареи собственного производства. </p>
+                            <ul class="mark_list">
+                                <li>Более 10 лет опыта работы.</li>
+                                <li>Большой выбор материалов и вариантов исполнения. Модели от «эконом» до «премиум».</li>
+                                <li>Наличный и безналичный расчет. Скидка за объем.</li>
+                                <li>Работаем по всей Беларуси с доставкой к дому, по Минску замер
+                                    и установка — бесплатно! </li>
+                                <li>Исполнение заказа от 1 до 14 дней в зависимости от модели экрана.</li>
+                            </ul>
+                            <p>Ekrany.by – мы стараемся качественно и профессионально сделать
+                                ваш дом или офис уютнее.</p>
+                        </div>
+                        <div class="img_box"><img src="assets/img/main-img.png" alt=""></div>
+                    </div>
+                </div>
+                
+                
+            </section>
+        </div>
+
+        <section class="form_section">
+            <div class="container">
+                <div class="form_box">
+                    <div class="form_text_box">
+                        <h2 class="form_title">Нужен экран на батарею <br> 
+                            для дома или офиса?</h2>
+                        <p class="form_text">Свяжитесь с нами и мы подберем для вас подходящий вариант</p>
+                    </div>
+                    <form>
+                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Мобильный" class="mobile_masked">
+                        <button type="submit" class="animate_button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="whrite_space"></div>
+    </main>
+
+    {{> footer }}
+
+    {{> modals }}
+</body>
+</html>
