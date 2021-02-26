@@ -515,6 +515,37 @@ section.advantages{
                 width: 45px;
                 height: 45px;
                 margin: 5px;
+                .photo_example_box{
+                    width: 240px;
+                    height: 120px;
+                    border: 5px solid #AC9573;
+                    z-index: 5;
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    left: calc(50% - 120px);
+                    filter: drop-shadow(0px 0px 10px rgba(172, 149, 115, 0.6));
+                    bottom: calc(100% - 1px);
+                    transition: .5s;
+                    &::after{
+                        content: "";
+                        width: 13px;
+                        height: 8px;
+                        background: url(../img/svg/down-arrow.svg) center/100% no-repeat;
+                        position: absolute;
+                        left: calc(50% - 6.5px);
+                        bottom: -12px;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                &:hover .photo_example_box{
+                    visibility: visible; 
+                    opacity: 1;
+                }
             }
             .price_example{
                 width: 160px;
@@ -978,31 +1009,7 @@ section.review_mail{
         cursor: pointer;
     }
 }
-.photo_example_box{
-    width: 240px;
-    height: 120px;
-    border: 5px solid #AC9573;
-    z-index: 5;
-    visibility: hidden;
-    position: absolute;
-    left: 0;
-    top: 0;
-    filter: drop-shadow(0px 0px 10px rgba(172, 149, 115, 0.6));
-    &::after{
-        content: "";
-        width: 13px;
-        height: 8px;
-        background: url(../img/svg/down-arrow.svg) center/100% no-repeat;
-        position: absolute;
-        left: calc(50% - 6.5px);
-        top: 100%;
-    }
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
+
 
 @media screen and (max-width: 1170px){
     .container{
