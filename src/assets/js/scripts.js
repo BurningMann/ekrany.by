@@ -4,8 +4,29 @@ window.onload = function(){
         dots:true
     })
     $(".our_partners_wrapepr").slick({
+        slidesToShow: 5,
         prevArrow: "<div class='prev'><img src='assets/img/svg/slider-arrow.svg'></div>",
         nextArrow: "<div class='next'><img src='assets/img/svg/slider-arrow.svg'></div>",
+        responsive: [
+          {
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 3,
+            }
+          },
+          {
+            breakpoint: 780,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 1,
+            }
+          },
+        ]
     })
     $(".review_mail_slider").slick({
         slidesToShow: 4,
@@ -76,7 +97,15 @@ window.onload = function(){
         $(".mobile_menu").fadeToggle()
       })
     }
-
+    $(".example_element").mouseover(function(){
+      let posTop = $(this).offset().top
+      let posLeft = $(this).offset().left
+      let detail = $(this).data("detail")
+      $(".photo_example_box").offset({left:posLeft - 97,top:posTop - 130}).css("visibility","visible").find("img").attr("src",detail)
+    })
+    $(".example_wrapper").mouseleave(function(){
+        $(".photo_example_box").css("visibility","hidden")
+    })
 };       
          
         
